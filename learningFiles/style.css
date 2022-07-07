@@ -1,0 +1,71 @@
+/*
+Comment 
+2 
+*/
+html {
+  font-size: 75%;
+}
+
+.foo {
+  background-color: orange;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 2em;
+}
+.foo p {
+  color: blue;
+  font-size: 14px;
+  font-weight: bold;
+}
+.foo.block {
+  border: 1px solid;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+}
+a a:hover {
+  text-decoration: underline;
+}
+
+.cssgradients .foo {
+  background: -webkit-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  background: -moz-linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+  background: linear-gradient(top, #c9de96 0%, #8ab66b 44%, #398235 100%);
+}
+.no-cssgradients .foo {
+  background: #c9de96;
+}
+
+.box {
+  border: 1px solid #ccc;
+}
+
+.user-dialog-box, .alert-winning-user {
+  border: 10px solid grey;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.alert-winning-user {
+  border-color: green;
+}
+
+.user-notification {
+  border: 10px solid grey;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.alert-winning-user {
+  border-color: green;
+}
+
+.alert-winning-user-mixin {
+  border: 10px solid green;
+  padding: 10px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/*# sourceMappingURL=style.css.map */
