@@ -1,0 +1,100 @@
+$font-Size :18; //18 = Taille en px sur la maquette
+$h1-font-size : (28/18); //28 = Taille en px sur la maquette
+$h2-font-size : (20/18) ; // 20 = Taille h2 sur la maquette
+
+$color-orange : #EC4A3B;
+$color-white: #ffffff;
+$color-grey: #878787;
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 18px;
+}
+
+.blogCard{
+    position: relative;
+    width: 350px;
+
+    background-color: $color-white;
+    box-shadow: 1px 1px 5px rgba(0,0,0,0.25);
+
+    font-family: 'Mohave', sans-serif;
+    
+
+    time{
+        background-color: $color-orange;
+
+        //Positionnement
+        position: absolute;
+        right: 20px;
+        top: 20px;
+
+        //Forme ronde
+        border-radius: 60px;
+        width: 50px;
+        height: 50px;
+
+        //Contenu
+        color:$color-white;
+        text-align: center;
+
+        span{
+            display: block;
+        }
+    }
+
+    img{
+        width: 100%;
+        
+    }
+
+    .blogCardContent{
+        padding: 34px;
+
+        position: relative;
+
+        &::before{
+            content:'Photos';
+            position: absolute;
+            top:-40px;
+            left: 0;
+            background-color: $color-orange;
+            padding: 14px;
+            color: $color-white;
+        }
+    }
+
+    h1{
+         font-size: $h1-font-size+em;
+         font-weight: 700;
+         
+    }
+
+    h2{
+        font-size: $h2-font-size+em;
+        color: $color-orange;
+
+        margin: 20px 0 40px 0;
+    }
+
+    p{
+        margin: 40px 0;
+    }
+
+    ul{
+        display: flex;
+        gap: 16px;
+
+        color: $color-grey;
+    }
+
+    &:hover{
+        p {
+            height: 0;
+            opacity: 0;
+        }
+    }
+}
