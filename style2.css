@@ -23,15 +23,13 @@ body {
     .blogCard time span {
       display: block; }
   .blogCard p {
-    overflow: hidden;
-    opacity: 0; }
+    transform: scaleY(0);
+    overflow: hidden; }
   .blogCard .blogCardContent {
     transition: 1s;
     padding: 34px;
     position: relative;
-    background-color: #ffffff;
-    z-index: 2;
-    transform: translateY(-50px); }
+    background-color: #ffffff; }
     .blogCard .blogCardContent::before {
       content: 'Photos';
       position: absolute;
@@ -45,15 +43,17 @@ body {
     transform: translateY(-50px); }
     .blogCard:hover .blogCardContent p {
       transition: 1s;
-      opacity: 1; }
+      transform: scaleY(100%); }
+
+.blogCardContent {
+  position: relative;
+  top: -10px;
+  background-color: #ffffff; }
 
 .blogCard-details {
-  z-index: 100;
-  position: relative;
   display: flex;
   justify-content: center;
   gap: 16px;
-  background-color: #ffffff;
   color: #878787; }
   .blogCard-details li {
     padding-bottom: 34px; }
@@ -67,4 +67,4 @@ h2 {
   color: #EC4A3B;
   margin: 20px 0 40px 0; }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=style2.css.map */
