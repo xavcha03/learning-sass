@@ -4,6 +4,10 @@
 
 Add learning files in ./learningFile directory
 
+## Notes
+
+Création d'une nouvelel version -> recommencer à 0
+
 ## Informations
 
 <time> 
@@ -22,25 +26,28 @@ Add learning files in ./learningFile directory
 
 ### Base
 
-Contient les fondations du site. 
+Contient les fondations du site.
+
 - Police de caractères
 - Normes que l'on veut appliquer au site (ex. box-sizing)
 
-
 ### Utils
+
 - Variables
 - fonctions
 - Mixins
 - %placeholders -> @extend
 
 ### Layout (mise en page)
-blocs BEM  qui contiennent ce qui est réutilisable
+
+blocs BEM qui contiennent ce qui est réutilisable
+
 - header
 - footer
 - Mise en page de grande taille
 
-
 ### components
+
 pour ranger les blocs BEM indépendants, comme les boutons.
 Les layout peuvent utiliser des composants
 
@@ -52,11 +59,11 @@ Les blocs de codes qui ne s'appliquent qu'à une seule page.
 ### Themes.
 
 Code thématique (un site customisé pour noël)
+
 ### Vendors (tiers).
 
 Contient les css externes
+
 - Boostrap
 - Jquerry UI
 - etc.
-
-
