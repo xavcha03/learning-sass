@@ -51,8 +51,8 @@ body{
     }
 
     p{
+        transform: scaleY(0);
         overflow: hidden;
-        opacity: 0;
     }
 
     .blogCardContent{
@@ -61,9 +61,6 @@ body{
 
         position: relative;
         background-color: $color-white;
-        z-index: 2;
-        transform: translateY(-50px);
-
 
         &::before{
             content:'Photos';
@@ -76,34 +73,32 @@ body{
         }
     }
 
-
     &:hover{
        
         .blogCardContent{
-            
             transition: 1s;
             transform: translateY(-50px);
 
             p{
                 transition: 1s;
-                opacity: 1;
+                transform: scaleY(100%);
             }
         }
     }
 }
 
-
+.blogCardContent{
+    position: relative;
+    top:-10px;
+    background-color: $color-white;
+}
 
 
 
 .blogCard-details{
-    z-index: 100;
-    position: relative; //rel pour le z-index => static fonctionne pas
     display: flex;
     justify-content: center;
     gap: 16px;
-
-    background-color: $color-white;
 
     color: $color-grey;
     
