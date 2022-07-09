@@ -1,6 +1,6 @@
 # learning-sass
 
-## The project can be view [here](https://xavcha03.github.io/learning-sass/)
+The project can be view [here](https://xavcha03.github.io/learning-sass/)
 
 ## Learning phase
 
