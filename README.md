@@ -1,5 +1,7 @@
 # learning-sass
 
+## The project can be view [here](https://xavcha03.github.io/learning-sass/)
+
 ## Learning phase
 
 Add learning files in ./learningFile directory
