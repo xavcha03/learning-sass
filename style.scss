@@ -1,5 +1,5 @@
 $font-Size :18; //18 = Taille en px sur la maquette
-$h1-font-size : (28/18); //28 = Taille en px sur la maquette
+$h1-font-size : (26/$font-Size); //28 = Taille en px sur la maquette
 $h2-font-size : (20/18) ; // 20 = Taille h2 sur la maquette
 
 $color-orange : #EC4A3B;
@@ -17,18 +17,22 @@ body{
 .blogCard{
     
     width: 350px;
-    border: 1px solid blue;
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: space-between;
     position: relative;
+    border: 1px solid black;
+    box-shadow: 1px 1px 8px black;
+
+    overflow: hidden;
 
 
     img{
         width: 100%;
+        transition: 1s;
+        z-index: 99;
+
     }
 
     time{
+        z-index: 1;
         background-color: $color-orange;
 
         //Positionnement
@@ -38,31 +42,39 @@ body{
 
         //Forme ronde
         border-radius: 60px;
-        width: 50px;
-        height: 50px;
+        //width: 55px;
+        //height: 50px;
+        padding: 16px;
 
         //Contenu
         color:$color-white;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 
         span{
             display: block;
         }
     }
 
-    p{
-        overflow: hidden;
-        opacity: 0;
-    }
+  
 
-    .blogCardContent{
-        transition: 1s;
+    .blogCard-content{
         padding: 34px;
 
         position: relative;
         background-color: $color-white;
         z-index: 2;
-        transform: translateY(-50px);
+        transition: transform 1s;
+
+        p{
+            overflow: hidden;
+            opacity: 0;
+            position: absolute;
+            
+
+        }
 
 
         &::before{
@@ -78,15 +90,21 @@ body{
 
 
     &:hover{
-       
-        .blogCardContent{
+
+        img{
+            transition: 1s;
+            opacity: 0.5;
+            transform: scale(1.3);
+        }
+        .blogCard-content{
             
             transition: 1s;
-            transform: translateY(-50px);
+            transform: translateY(-60px);
 
             p{
-                transition: 1s;
+                transition: 2s;
                 opacity: 1;
+                
             }
         }
     }
@@ -108,14 +126,38 @@ body{
     color: $color-grey;
     
 li{
+    padding-left: $font-Size+px;
+    position: relative;
+
     padding-bottom: 34px;
+    &::before{
+        content: "";
+        display: block;
+        height: $font-Size+px;
+        width: $font-Size+px;
+        background-size: contain;
+        position: absolute;
+        left: -$h1-font-size+px;
+        background-repeat: no-repeat;
+        
+
+    }
+
+
+
+    &:first-child::before{
+        background-image: url("assets/fa-regular_clockico-.svg");
+    }
+    &:nth-child(2):before{
+        background-image: url("assets/fa-solid_commentsico-.svg");
+    }
 }
 }
 
 
 h1{
     font-size: $h1-font-size+em;
-    font-weight: 700;
+    letter-spacing: 0.06em;
     
 }
 
